@@ -118,7 +118,7 @@ def humid_gen():
         else:
             humidity = past_hum - 0.1
         row = pd.DataFrame([[time,  humidity, lat, long]],
-                           columns=['time', 'temperature', 'humidity', 'latitude', 'longitude'])
+                           columns=['time', 'humidity', 'latitude', 'longitude'])
         df = df.append(row)
         past_hum = humidity
     df = df.reset_index()
